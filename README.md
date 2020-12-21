@@ -1,2 +1,1 @@
-# Ryan
-Math_Class_Video_Game
+# Math_Class_Video_Game
