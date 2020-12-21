@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0.764706, 1, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+
+[sub_resource type="CapsuleMesh" id=4]
+material = SubResource( 3 )
+radius = 0.95
+radial_segments = 90
+
+[node name="Spatial" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 3.02698, 0, 0, 0, 0.0287007, 0, 0, 0, 2.99435, 0.083015, -0.130389, 1.4662 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.989993, 0.140657, 0.0113832, 0.125207, 0.838308, 0.530625, 0.0650935, 0.52674, -0.84753, 0.173223, 1.6886, -1.21583 )
+fov = 55.791
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial"]
+transform = Transform( 0.104844, -0.0669854, -0.000765772, -0.00527905, -0.00861875, -0.125027, 0.0788226, 0.132801, 0.000259088, 0.828807, 0.400665, 0.175869 )
+mesh = SubResource( 4 )
+material/0 = null
